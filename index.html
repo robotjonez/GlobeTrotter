@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
 		<title>Globe Trotter</title>
+    <script type="text/javascript" src="search_function.js"></script>
 	</head>
 	<body>
 		<h1>Country Search</h1>
@@ -11,7 +12,7 @@
 				<form>
 					<label> </label>
 						<input name="country_name" type="text" alt="country_name" id="country_name" placeholder="Japan" required>
-					<button type="button" alt="country_search" id="country_search" >Submit</button>
+					<button type="button" alt="country_search" id="country_search" onclick="search_country();" >Submit</button>
 				</form>
 			</div>
 			<div>
