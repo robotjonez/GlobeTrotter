@@ -7,7 +7,7 @@
   {
     $search_value = $_REQUEST["search_value"];
 
-    if (strlen($search_value) > 3)
+    if ($search_value != null && strlen($search_value) > 3)
     {
       $request = file_get_contents('https://restcountries.eu/rest/v2/name/' . $search_value);
       $response = json_decode($request);
