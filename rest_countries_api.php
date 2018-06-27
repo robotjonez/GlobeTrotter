@@ -17,9 +17,19 @@
       $response = json_decode($request);
     }
 
-
 		if ($response != null)
 		{
+			echo "<table>";
+				echo "<tr>";
+					echo "<th>Country Name</th>";
+					echo "<th>Alpha Code 2</th>";
+					echo "<th>Alpha Code 3</th>";
+					echo "<th>Flag</th>";
+					echo "<th>Region</th>";
+					echo "<th>Subregion</th>";
+					echo "<th>Population</th>";
+					echo "<th>Language(s)</th>";
+				echo "</tr>";
       var_dump($response);
     }
   }
