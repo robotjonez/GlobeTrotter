@@ -39,3 +39,21 @@ h1::after
 {
   right:-70px;
 }
+
+table
+{
+	margin-top: 2rem;
+	width: 100%;
+	text-align: center;
+  border: 2px solid black;
+  border-collapse: collapse;
+  color:#black;
+}
+
+th
+{
+	padding: 0.5rem 1rem;
+  border: 2px solid black;
+  border-collapse: collapse;
+  background-color: #ddd;
+}
