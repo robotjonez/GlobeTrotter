@@ -1,11 +1,11 @@
-function search_country()
+function get_and_display_countries_table_from_php()
 {
-	var country_name = document.getElementById("search").value;
+	var country_name = document.getElementById("search_field").value;
 
   if (country_name != "")
 	{
     var request = new XMLHttpRequest();
-    request.open('GET', 'https://restcountries.eu/rest/v2/name/' + country_name, true);
+    request.open('GET', "rest_countries_api.php?function=get_countries_data_and_build_table&country_name=" + country_name, false);
     request.send();
     document.getElementById("countries_table_display").innerHTML = request.responseText;
   }
