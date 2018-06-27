@@ -18,7 +18,14 @@
               <input  type="text" alt="country_search" id="search_field" placeholder="Search country name" required>
               <button type="button" alt="country_submit" id="submit" onclick="get_and_display_countries_table_from_php();">Submit</button>
             </form>
-          </div>
+						<script>
+						    document.getElementById('search_field').addEventListener('keypress', function(event) {
+						        if (event.keyCode == 13) {
+						            event.preventDefault();
+						        }
+						    });
+						</script>
+					 </div>
         </section>
     </div>
       <div id="countries_table_display">
