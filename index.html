@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
 
+	<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Globe Trotter</title>
+    <link rel=stylesheet href="main_style.css"></link>
     <script type="text/javascript" src="search_function.js"></script>
-
 	</head>
+
 	<body>
-		<h1>Country Search</h1>
-		<section>
-			<div>
-				<form>
-					<label> </label>
-						<input name="country_name" type="text" alt="country_name" id="country_name" placeholder="Japan" required>
-					<button type="button" alt="country_search" id="country_search" onclick="search_country();" >Submit</button>
-				</form>
-			</div>
-			<div>
-			</div>
-		</section>
+    <div id="user_interface">
+      <h1>Countries App</h1>
+        <section>
+          <div>
+            <form>
+              <input  type="text" name="country_name" alt="country_name" id="search" placeholder="Search country name" required>
+              <button type="button" alt="country_search" id="submit" onclick="search_country();" >Submit</button>
+            </form>
+          </div>
+        </section>
+    </div>
+      <div id="countries_table_display">
+      </div>
 	</body>
+
 </html>
