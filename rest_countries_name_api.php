@@ -23,7 +23,16 @@
 					echo "<th>Language(s)</th>";
 				echo "</tr>";
 
-			for ($i = 0; $i < 50; $i++)
+ 			if (count($response) <= 50)
+			{
+				$limit = count($response);
+			}
+			else
+			{
+				$limit = 50;
+			}
+
+			for ($i = 0; $i < $limit; $i++)
 			{
 				echo "<tr>";
 					echo "<td>" . $response[$i]->name . "</td>";
@@ -49,10 +58,22 @@
 				echo "</tr>";
 			}
 			echo "</table>";
+
+			//Display *error* message when results contain more than 50 items
+			if (count($response) > 50)
+			{
+				echo "<h3>Total countries: " . count($response) . "</h3>";
+				echo "<p>Displaying 50 out of " . count($response) . " results" . "</p>";
+			}
+			else
+			{
+				echo "<h3>Total countries: " . count($response) . "</h3>";
+			}
+
 		}
 		else
 		{
-			echo $search_value . " is no a valid country name";;
+			echo $search_value . " is no a valid country name";
 		}
 	}
 ?>
