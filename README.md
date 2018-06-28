@@ -1,7 +1,7 @@
 # GlobeTrotter
 A learning application that allows users to search for countries using either a country name or a country code.
 
-###Objective
+##Objective
 As a user, I want to search for countries by name, full name, or code and view then as a list of elements on an HTML page so that I can find the data I am looking for.
 
 ### Brief description
