@@ -30,6 +30,7 @@
 					echo "<th>Population</th>";
 					echo "<th>Language(s)</th>";
 				echo "</tr>";
+      echo "</table>";
       var_dump($response);
     }
   }
