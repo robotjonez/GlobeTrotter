@@ -29,15 +29,21 @@
 					echo "<td>" . $response["region"] . "</td>";
 					echo "<td>" . $response["subregion"] . "</td>";
 					echo "<td>" . number_format($response["population"]) . "</td>";
-
-					echo "</td>";
-				echo "</tr>";
-				var_dump($response["languages"]);
-			}
-			else
-			{
-				echo "error";
-			}
-		echo "</table>";
+					echo "<td>";
+						for ($i = 0; $i < count($response["languages"]); $i++)
+						{
+							if (count($response["languages"]) > 1)
+							{
+								echo $response["languages"][$i]["name"] . "<br>";
+							}
+							else
+							{
+								echo $response["languages"][$i]["name"];
+							}
+						}
+						echo "</td>";
+					echo "</tr>";
+				}
+				echo "</table>";
 	}
 ?>
