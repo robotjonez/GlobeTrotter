@@ -2,7 +2,6 @@
 
 	$function = $_REQUEST["function"];
   $function();
-
   function get_countries_data_and_build_table()
   {
     $search_value = $_REQUEST["search_value"];
