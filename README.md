@@ -1,7 +1,7 @@
 # GlobeTrotter
 A learning application that allows users to search for countries using either a country name or a country code.
 
-##Objective
+###Objective
 As a user, I want to search for countries by name, full name, or code and view then as a list of elements on an HTML page so that I can find the data I am looking for.
 
 ### Brief description
@@ -12,7 +12,7 @@ You must have php installed on your local machine.
 for linux: apt-get install php
 
 
-##Running
+###Running
 Clone or download the code base form my github -> in the terminal cd into the directory of the code base you downloaded.
 Run command: php -S localhost:8000
 Visit: http://localhost:8000/
