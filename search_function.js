@@ -4,7 +4,7 @@ function get_and_display_countries_table_from_php()
 
   if (search_value != "")
 	{
-		if (search_value.length >= 4)
+		if (search_value != is_upper_case(search_value))
 		{
 			var request = new XMLHttpRequest();
 	    request.open('GET', "rest_countries_name_api.php?function=get_countries_data_and_build_table&search_value=" + search_value, false);
@@ -23,4 +23,9 @@ function get_and_display_countries_table_from_php()
   {
     window.alert("Search Field Is Empty, You Must Search a country by its name.");
   }
+}
+
+
+function is_upper_case(str) {
+    return str.toUpperCase();
 }
