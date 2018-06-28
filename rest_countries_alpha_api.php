@@ -44,6 +44,11 @@
 						echo "</td>";
 					echo "</tr>";
 				}
+				else {
+					echo $search_value . " is no a valid country code";
+				}
 				echo "</table>";
+				echo "<h2>Total countries: " . count($response) . "</h2>";
+
 	}
 ?>

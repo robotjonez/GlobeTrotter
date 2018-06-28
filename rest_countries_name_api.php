@@ -52,7 +52,7 @@
 		}
 		else
 		{
-			echo "error";
+			echo $search_value . " is no a valid country name";;
 		}
 	}
 ?>

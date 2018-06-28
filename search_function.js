@@ -21,7 +21,7 @@ function get_and_display_countries_table_from_php()
   }
   else
   {
-    window.alert("Search Field Is Empty, You Must Search a country by its name.");
+    window.alert("Search feild is empty, please enter a valid country name.");
   }
 }
 
