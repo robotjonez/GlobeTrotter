@@ -89,10 +89,30 @@
 
 			echo "</ul>";
 
+			echo "<h3>Subregions: </h3>";
+			echo "<ul>";
+
+				$subregions = [];
+
+				foreach ($response as &$subregion)
+				{
+					array_push($subregions,$subregion->subregion);
+				}
+				$subregion_display_value = array_count_values($subregions);
+
+				foreach ($subregion_display_value as $key => $value)
+				{
+					if ($key != null || $key != "")
+					{
+						echo "<li>" . $key . " (" . $value . ")</li>";
+					}
+				}
+
+			echo "</ul>";
 		}
 		else
 		{
-			echo $search_value . " is no a valid country name";
+			echo $search_value . " is not a valid country name, if you are trying to search by country code it must be uppercase.";
 		}
 	}
 ?>

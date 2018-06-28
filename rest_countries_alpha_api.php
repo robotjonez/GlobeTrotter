@@ -51,15 +51,15 @@
 				echo "<ul>";
 				echo "<li>" . $response["region"] . "</li>";
 				echo "</ul>";
+
 				echo "<h3>Subregions: </h3>";
 				echo "<ul>";
 				echo "<li>" . $response["subregion"] . "</li>";
-				}
-				else
-				{
-					echo $search_value . " is no a valid country code";
-				}
 
-
+			}
+			else
+			{
+				echo $search_value . " is not a valid country code";
+			}
 	}
 ?>
