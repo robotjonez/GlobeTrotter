@@ -43,12 +43,20 @@
 						}
 						echo "</td>";
 					echo "</tr>";
+				echo "</table>";
+
+				echo "<h2>Total countries: " . count($response["name"]) . "</h2>";
+
+				echo "<h2>Regions: </h2>";
+				echo "<ul>";
+				echo "<li>" . $response["region"] . "</li>";
+				echo "</ul>";
 				}
-				else {
+				else
+				{
 					echo $search_value . " is no a valid country code";
 				}
-				echo "</table>";
-				echo "<h2>Total countries: " . count($response) . "</h2>";
+
 
 	}
 ?>

@@ -59,16 +59,36 @@
 			}
 			echo "</table>";
 
-			//Display *error* message when results contain more than 50 items
 			if (count($response) > 50)
 			{
-				echo "<h3>Total countries: " . count($response) . "</h3>";
+				echo "<h2>Total countries: " . count($response) . "</h2>";
 				echo "<p>Displaying 50 out of " . count($response) . " results" . "</p>";
 			}
 			else
 			{
-				echo "<h3>Total countries: " . count($response) . "</h3>";
+				echo "<h2>Total countries: " . count($response) . "</h2>";
 			}
+
+			echo "<h3>Regions: </h3>";
+			echo "<ul>";
+
+				$regions = [];
+
+				foreach ($response as &$region)
+				{
+					array_push($regions,$region->region);
+				}
+
+				$region_display_value = array_count_values($regions);
+				foreach ($region_display_value as $key => $value)
+				{
+					if ($key != null || $key != "")
+					{
+						echo "<li>" . $key . " (" . $value . ")</li>";
+					}
+				}
+
+			echo "</ul>";
 
 		}
 		else
