@@ -31,7 +31,7 @@
 					echo "<th>Language(s)</th>";
 				echo "</tr>";
 
-			for ($i = 0; $response[$i] < 50; $i++)
+			for ($i = 0; $response[$i]; $i++)
 			{
 				echo "<tr>";
 					echo "<td>" . $response[$i]->name . "</td>";
